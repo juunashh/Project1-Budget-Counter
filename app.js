@@ -97,6 +97,7 @@ function updateIncomeTable() {
         table.appendChild(uusiRivi);
     }
     calculateIncome();
+    calculateBudget();
 }
 
 function iRemoveRow() {
@@ -185,6 +186,8 @@ function updateExpenseTable() {
         uusiRivi.innerHTML = '<td>' + name + '</td><td>' + type + '</td><td>' + amount + '</td><td><input type="checkbox" class="expenses-checkbox" id="checkbox-' + uusiID + '" onchange="eRemoveRow()">';
         table.appendChild(uusiRivi);
         calculateExpenses();
+        calculateBudget();
+        expenseBreakdown();
     }
 }
 
@@ -215,25 +218,17 @@ function calculateExpenses() {
 
 // CALCULATE THE TOTAL
 function calculateBudget() {
-    var totalIncome = 0;
-    var totalExpenses = 0;
     var leftover = 0;
     var results = document.getElementById("leftover");
     if (incomeArray === "" || expenseArray === "") {
         return false;
     } else {
         leftover = calculateIncome() - calculateExpenses();
-        //for (let i = 0; i < incomeArray.length; i++) {
-        //    var n = parseInt(incomeArray[i].amount);
-        //    totalIncome = totalIncome + n;
-        //}
-        //for (let i = 0; i < expenseArray.length; i++) {
-        //    var n = parseInt(expenseArray[i].amount);
-        //    totalExpenses = totalExpenses + n;
-        //}
     }
-    // leftover = totalIncome - totalExpenses;
-    results.innerHTML = leftover;
+    if (leftover < 0) {
+        results.style.color = "red";
+    }
+    results.innerHTML = "<b>" + leftover + "</b>";
 }
 
 function expenseBreakdown() {

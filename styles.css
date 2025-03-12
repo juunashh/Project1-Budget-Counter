@@ -32,19 +32,17 @@ input[type=button] {
 }
 
 #application {
-
     margin: auto;
     display: flex;
 }
 
 #income-div {
-
     justify-content: left;
     padding: 1em 4em 1em 4em;
     background-color: ghostwhite;
     width: 50%;
+    border: 3px outset;
     border-right: 0px;
-    border-style: groove;
 }
 
 #expenses-div {
@@ -53,8 +51,8 @@ input[type=button] {
     padding: 1em 4em 1em 4em;
     background-color: ghostwhite;
     width: 50%;
+    border: 3px outset;
     border-left: 0px;
-    border-style: groove;
 }
 
 table,th,td {
@@ -64,9 +62,11 @@ table,th,td {
     padding: 0.2em;
 }
 #results {
-    margin: auto;
+    margin-top: 2em;
+    border: 3px outset;
     display: flex;
     background-color: blanchedalmond;
+    padding: 1em;
 }
 
 #breakdown-div {
