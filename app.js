@@ -42,6 +42,7 @@ function validateIncomeInput() {
     let name = document.forms["income"]["i-name"];
     if (name.value.length > 15 || name.value.length < 3 || name.value == "") {
         name.style.borderColor = "red";
+        alert("Check the name field! 3-15 characters allowed");
         return false;
     } else {
         name.style.borderColor = "";
@@ -49,6 +50,7 @@ function validateIncomeInput() {
     let amount = document.forms["income"]["i-amount"];
     if (amount.value === "" || amount.value === NaN || amount.value < 1) {
         amount.style.borderColor = "red";
+        alert("Check the amount! Value should be more than 1");
         return false;
     } else {
         amount.style.borderColor = "";
@@ -133,6 +135,7 @@ function validateExpenseInput() {
     let name = document.forms["expenses"]["e-name"];
     if (name.value.length > 15 || name.value.length < 3 || name.value == "") {
         name.style.borderColor = "red";
+        alert("Check the name field! 3-15 characters allowed");
         return false;
     } else {
         name.style.borderColor = "";
@@ -140,6 +143,7 @@ function validateExpenseInput() {
     let amount = document.forms["expenses"]["e-amount"];
     if (amount.value === "" || amount.value === NaN || amount.value < 1) {
         amount.style.borderColor = "red";
+        alert("Check the amount! Value should be more than 1");
         return false;
     } else {
         amount.style.borderColor = "";
