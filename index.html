@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+    <h1>Budget tracker v1.0</h1>
+    <div id="application">
+        <div id="income-div">
+            <h2>Income</h2>
+            <form id="income-form" name="income" action="">
+                <div>
+                    <label for="i-name">Name</label>
+                    <br/>
+                    <input type="text" name="i-name" id="i-name">
+                </div>
+                <div>
+                    <label for="i-amount">Amount</label>
+                    <br/>
+                    <input type="number" name="i-amount" id="i-amount">
+                </div>
+                <input type="button" name="new-income" value="Add" onclick="incomeBtn()">
+            </form>
+            <table id="income-table">
+                <thead>
+                    <th>Name</th>
+                    <th>Amount</th>
+                    <th>Remove?</th>
+                </thead>
+                
+                <!-- Data here -->
+                </table>
+            <p>Total: <span id="income-total"></span></p>
+        </div>
+
+
+        <div id="expenses-div">
+            <h2>Expenses</h2>
+            <form id="expenses-form" name="expenses" action="">
+                <div>
+                    <label for="e-name">Name</label>
+                    <input type="text" name="e-name" id="e-name">
+                </div>
+                <div>
+                    <label for="e-type">Type</label>
+                    <select name="e-type" id="e-type">
+                        <option value="Housing">Housing</option>
+                        <option value="Utilities">Utilities</option>
+                        <option value="Groceries">Groceries</option>
+                        <option value="Subscriptions">Subscriptions</option>
+                        <option value="Clothing">Clothing</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="e-amount">Amount</label>
+                    <input type="number" name="e-amount" id="e-amount">
+                </div>
+                <input type="button" name="new-expense" value="Add" onclick="expensesBtn()">
+            </form>
+            <table id="expenses-table">
+                <thead>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Amount</th>
+                    <th>Remove?</th>
+                </thead>
+                
+                <!-- Data here -->
+                </table>
+            <p>Total: <span id="expenses-total"></span></p>
+        </div>
+
+        
+    </div>
+
+    <div id="results">
+        <h2>Results</h2>
+        <p>Leftover budget: <span id="leftover"></span></p>
+        <h3>Breakdown of expenses:</h3>
+        <table id="expenses-breakdown">
+            <thead>
+                <th>Type</th>
+                <th>Percentage (%)</th>
+            </thead>
+            <tr>
+                <td>Housing</td>
+                <td id="housing-data"></td>
+            </tr>
+            <tr>
+                <td>Utilities</td>
+                <td id="utilities-data"></td>
+            </tr>
+            <tr>
+                <td>Groceries</td>
+                <td id="groceries-data"></td>
+            </tr>
+            <tr>
+                <td>Subscriptions</td>
+                <td id="subscriptions-data"></td>
+            </tr>
+            <tr>
+                <td>Clothing</td>
+                <td id="clothing-data"></td>
+            </tr>
+            <tr>
+                <td>Other</td>
+                <td id="other-data"></td>
+            </tr>
+        </table>
+    </div>
+</div>
+    <script>
+
+    </script>
+
+    <script src="app.js"></script>
+</body>
+</html>

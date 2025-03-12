@@ -1,0 +1,29 @@
+.container {
+    width: fit-content;
+    margin: auto;
+}
+
+#application {
+
+    margin: auto;
+    display: flex;
+}
+#income-div {
+
+    justify-content: left;
+    padding: 1em 4em 1em 4em;
+    border-style: solid;
+    border-radius: 1px;
+}
+#expenses-div {
+     
+    justify-content: right;
+    padding: 1em 4em 1em 4em;
+    border-style: solid;
+    border-radius: 1px;
+}
+
+#results {
+    margin: auto;
+    background-color: blanchedalmond;
+}
