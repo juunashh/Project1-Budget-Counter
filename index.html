@@ -34,7 +34,7 @@
                 
                 <!-- Data here -->
                 </table>
-            <p>Total: <span id="income-total"></span></p>
+            <p><b>Total: <span id="income-total"></span></b></p>
         </div>
 
 
@@ -43,10 +43,12 @@
             <form id="expenses-form" name="expenses" action="">
                 <div>
                     <label for="e-name">Name</label>
+                    <br/>
                     <input type="text" name="e-name" id="e-name">
                 </div>
                 <div>
                     <label for="e-type">Type</label>
+                    <br/>
                     <select name="e-type" id="e-type">
                         <option value="Housing">Housing</option>
                         <option value="Utilities">Utilities</option>
@@ -58,6 +60,7 @@
                 </div>
                 <div>
                     <label for="e-amount">Amount</label>
+                    <br/>
                     <input type="number" name="e-amount" id="e-amount">
                 </div>
                 <input type="button" name="new-expense" value="Add" onclick="expensesBtn()">
@@ -72,51 +75,52 @@
                 
                 <!-- Data here -->
                 </table>
-            <p>Total: <span id="expenses-total"></span></p>
+            <p><b>Total: <span id="expenses-total"></span></b></p>
         </div>
 
         
     </div>
 
     <div id="results">
-        <h2>Results</h2>
-        <p>Leftover budget: <span id="leftover"></span></p>
-        <h3>Breakdown of expenses:</h3>
-        <table id="expenses-breakdown">
-            <thead>
-                <th>Type</th>
-                <th>Percentage (%)</th>
-            </thead>
-            <tr>
-                <td>Housing</td>
-                <td id="housing-data"></td>
-            </tr>
-            <tr>
-                <td>Utilities</td>
-                <td id="utilities-data"></td>
-            </tr>
-            <tr>
-                <td>Groceries</td>
-                <td id="groceries-data"></td>
-            </tr>
-            <tr>
-                <td>Subscriptions</td>
-                <td id="subscriptions-data"></td>
-            </tr>
-            <tr>
-                <td>Clothing</td>
-                <td id="clothing-data"></td>
-            </tr>
-            <tr>
-                <td>Other</td>
-                <td id="other-data"></td>
-            </tr>
-        </table>
+        <div id="leftover-div">
+            <h2>Results</h2>
+            <p>Leftover budget: <span id="leftover"></span></p>
+        </div>
+        <div id="breakdown-div">
+            <h3>Breakdown of expenses:</h3>
+            <table id="expenses-breakdown">
+                <thead>
+                    <th>Type</th>
+                    <th>Percentage (%)</th>
+                </thead>
+                <tr>
+                    <td>Housing</td>
+                    <td id="housing-data"></td>
+                </tr>
+                <tr>
+                    <td>Utilities</td>
+                    <td id="utilities-data"></td>
+                </tr>
+                <tr>
+                    <td>Groceries</td>
+                    <td id="groceries-data"></td>
+                </tr>
+                <tr>
+                    <td>Subscriptions</td>
+                    <td id="subscriptions-data"></td>
+                </tr>
+                <tr>
+                    <td>Clothing</td>
+                    <td id="clothing-data"></td>
+                </tr>
+                <tr>
+                    <td>Other</td>
+                    <td id="other-data"></td>
+                </tr>
+            </table>
+        </div>
     </div>
 </div>
-    <script>
-
-    </script>
 
     <script src="app.js"></script>
 </body>
